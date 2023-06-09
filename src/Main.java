@@ -31,5 +31,35 @@ public class Main {
 
         System.out.println(" Interest "+ years+ " for is "+ account2.calculateInterest(years));
 
+        //-------------------------------------------------------------------------------------//
+        //HDFC BANK ACCOUNT
+        HDFCAccount hdfcAccount1=new HDFCAccount("Teju",10000,"123456");
+        System.out.println("Congrats! "+hdfcAccount1.getName() + " Account has been created "+ hdfcAccount1.getAccount() );
+
+        HDFCAccount hdfcAccount2=new HDFCAccount("Nita",20000,"12345678");
+        System.out.println("Congrats! "+hdfcAccount2.getName()+ " Account has been created " +hdfcAccount2.getAccount());
+
+        //addmoney
+        System.out.println(hdfcAccount1.addMoney(2000000));
+        System.out.println(hdfcAccount2.addMoney(3000000));
+
+        //change pass
+        System.out.println(hdfcAccount1.changePassword("12398","123456"));
+
+        //withrdraw money
+        System.out.println(hdfcAccount2.withdrawMoney("12345678",200000));
+
+        //fech balance
+        System.out.println(hdfcAccount1.fetchBalance("12398"));
+        System.out.println(hdfcAccount2.fetchBalance("12345678"));
+        //Integrest
+        System.out.println("Enter years you want to calculate");
+        int y=sc.nextInt();
+        System.out.println(hdfcAccount1.calculateInterest(y));
+        System.out.println(hdfcAccount2.calculateInterest(y));
+
+
+
+
     }
 }
